@@ -14,14 +14,15 @@ public class Blatt2 {
         e = a;
         System.out.println(b > e ? c > e ? d > e ? d : c : b : e);
 
-        int n = 5;
+        int n = 2;
         int i = 3;
         while (i < 2 * n) {
             i++;
             System.out.println(3.14 / (2 * i - 1));
         }
 
-        for (i = 3; i < 2 * n; i++) {
+        for (i = 3; i < 2 * n; ) {
+            i++;
             System.out.println(3.14 / (2 * i - 1));
         }
 
