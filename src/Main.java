@@ -4,6 +4,12 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int[] f = {1, 2};
+        int a = 3;
+        int s = abc(a, f);
+        System.out.println(f[1] + "");
+        System.out.println(a);
+        System.out.println(s);
         //Aufgabe 1
         System.out.println(10 / 3);
         System.out.println(10 / 3.0);
@@ -78,5 +84,15 @@ public class Main {
         System.out.println((x * y * y) / (107751) * (1682 * y * y + 29) + Math.pow(x, 3.0) / 107751 * (3 - 2 * x * x) + 832 / 107751);
 
 
+    }
+
+    private static int abc(int a, int[] f) {
+        int temp = 0;
+        for (int i = 0; i < f.length; i++) {
+            temp = temp + a * f[i];
+            a++;
+        }
+        f[1] = 5;
+        return temp;
     }
 }

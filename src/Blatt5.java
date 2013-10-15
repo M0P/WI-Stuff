@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Blatt5 {
@@ -7,7 +6,7 @@ public class Blatt5 {
     private Scanner scanner;
 
     public Blatt5() {
-        //aufgabe21();
+        aufgabe21();
         //aufgabe22();
         //aufgabe23();
     }
@@ -32,11 +31,11 @@ public class Blatt5 {
         }
     }
 
-    public void aufgabe21() {
-        int count = readInt("Wieviele Zahlen willst du sortieren? ");
+    private void aufgabe21() {
+        int count = MyMethods.readInt("Wieviele Zahlen willst du sortieren? ");
         zahlen = new int[count];
         for (int i = 0; i < zahlen.length; i++)
-            zahlen[i] = readInt((i + 1) + ". Zahl: ");
+            zahlen[i] = MyMethods.readInt((i + 1) + ". Zahl: ");
         bubbleSort(zahlen);
         for (int i : zahlen)
             System.out.print(i + " ");
@@ -44,7 +43,7 @@ public class Blatt5 {
     }
 
     public void aufgabe22() {
-        int anzahl = readInt("Anzahl der Zeilen: ");
+        int anzahl = MyMethods.readInt("Anzahl der Zeilen: ");
         int maxBreite = anzahl * 2 - 1;
         String zeile = "";
         for (int i = 0; i < anzahl; i++) {
@@ -91,33 +90,9 @@ public class Blatt5 {
     }
 
     private int readUngeradeZahl(String ausgabe) {
-        int wert = readInt(ausgabe);
+        int wert = MyMethods.readInt(ausgabe);
         while (wert < 2 || wert > 10 || wert % 2 == 0)
-            wert = readInt(ausgabe);
+            wert = MyMethods.readInt(ausgabe);
         return wert;
-    }
-
-    private int readInt(String ausgabe) {
-        scanner = new Scanner(System.in);
-        try {
-            System.out.print(ausgabe);
-            return scanner.nextInt();
-        } catch (InputMismatchException e) {
-            System.out.println("Du hast eine invalide Eingabe getätigt!");
-            return readInt(ausgabe);
-        }
-    }
-
-    private double readDouble(String ausgabe) {
-        scanner = new Scanner(System.in);
-        try {
-            System.out.print(ausgabe);
-            double wert = scanner.nextDouble();
-            return wert;
-        } catch (InputMismatchException e) {
-            e.printStackTrace();
-            System.out.println("Du hast eine invalide Eingabe getätigt!");
-            return readInt(ausgabe);
-        }
     }
 }
