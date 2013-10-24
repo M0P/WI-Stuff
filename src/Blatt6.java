@@ -1,16 +1,13 @@
 public class Blatt6 {
 
-    private int amountPersons;
-    private Person[] personenListe;
-
     public Blatt6() {
         aufgabe24();
 
     }
 
     private void aufgabe24() {
-        amountPersons = MyMethods.readInt("Wie viele Personen sollen sortiert werden?");
-        personenListe = new Person[amountPersons];
+        int amountPersons = MyMethods.readInt("Wie viele Personen sollen sortiert werden?");
+        Person[] personenListe = new Person[amountPersons];
         for (int i = 0; i < personenListe.length; i++) {
             personenListe[i] = new Person(i + 1);
         }

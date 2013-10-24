@@ -12,7 +12,7 @@ public class PersonenStatistik {
     }
 
     public void varianzAlter() {
-        System.out.println("Varianz der Altersangaben:" + ((1 / personenAlter.length) * altersVarianz()));
+        System.out.println("Varianz der Altersangaben:" + ((1.0 / personenAlter.length) * altersVarianz()));
     }
 
     private int altersVarianz() {
@@ -24,7 +24,7 @@ public class PersonenStatistik {
     }
 
     public void mittelwertAlter() {
-        System.out.println("Mittelwert der Altersangaben:" + ((1 / personenAlter.length) * altersSumme()));
+        System.out.println("Mittelwert der Altersangaben:" + ((1.0 / personenAlter.length) * altersSumme()));
     }
 
     private int altersSumme() {
