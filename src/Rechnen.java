@@ -9,7 +9,7 @@ public class Rechnen {
      */
     public void einlesen(Bruchzahl zahl) {
         zahl.setZaehler(Blatt8.readInt("Bitte den Zähler eingeben:"));
-        int nenner = 0;
+        int nenner;
         do nenner = Blatt8.readInt("Bitte den Nenner eingeben (ungleich 0):"); while(nenner == 0);
         zahl.setNenner(nenner);
     }

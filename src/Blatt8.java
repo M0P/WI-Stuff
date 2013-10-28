@@ -72,6 +72,7 @@ public class Blatt8 {
      * Liest einen Integer von der Konsole ein
      *
      * @param ausgabe
+     *         der Text welcher dem Nutzer als Eingabehilfe angezeigt wird
      *
      * @return den eingelesenen Wert
      */
