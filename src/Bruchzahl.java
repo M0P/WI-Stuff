@@ -1,4 +1,5 @@
 public class Bruchzahl {
+
     private int nenner;
     private int zaehler;
 
