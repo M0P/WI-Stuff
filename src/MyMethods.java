@@ -67,7 +67,6 @@ public class MyMethods {
             double wert = scanner.nextDouble();
             return wert;
         } catch(InputMismatchException e) {
-            e.printStackTrace();
             System.out.println("Du hast eine invalide Eingabe getätigt!");
             return readInt(ausgabe);
         }
