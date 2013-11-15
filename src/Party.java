@@ -1,11 +1,9 @@
 /**
- * Created with IntelliJ IDEA.
- * User: marc
- * Date: 05.11.13
- * Time: 21:59
- * To change this template use File | Settings | File Templates.
+ * Created with IntelliJ IDEA. User: marc Date: 05.11.13 Time: 21:59 To change this template use File | Settings | File
+ * Templates.
  */
 public class Party {
+
     public static void main(String[] args) {
         CD[] cdf;
         int anzahlCD = MyMethods.readInt("Wie viele CDs willst du eingeben?");
@@ -17,7 +15,7 @@ public class Party {
     }
 
     public static void einlesen(CD[] cdf) {
-        for (int i = 0; i < cdf.length; i++) {
+        for(int i = 0; i < cdf.length; i++) {
             String titel = MyMethods.readString("Titel:");
             int minuten = MyMethods.readInt("Spieldauer:");
             boolean augeliehen = MyMethods.readBoolean("ausgeliehen:");
@@ -27,9 +25,9 @@ public class Party {
     }
 
     public static void sortieren(CD[] cdf) {
-        for (int i = 0; i < cdf.length - 2; i++) {
+        for(int i = 0; i < cdf.length - 1; i++) {
             int max_index = i;
-            for (int j = i; j < cdf.length; j++) {
+            for(int j = i; j < cdf.length; j++) {
                 max_index = cdf[j].getSpielDauerMinuten() > cdf[max_index].getSpielDauerMinuten() ? j : max_index;
             }
             CD temp = cdf[i];
@@ -39,8 +37,7 @@ public class Party {
     }
 
     public static void vorhandeneAusgeben(CD[] cdf) {
-        for (CD cd : cdf)
-            if (!cd.isAusleihStatus())
-                System.out.println(cd.toString());
+        for(CD cd : cdf)
+            if(!cd.isAusleihStatus()) System.out.println(cd.toString());
     }
 }
